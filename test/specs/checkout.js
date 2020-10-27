@@ -30,7 +30,8 @@ describe("Adding item to cart and checking out", () => {
   });
 
   it("should find wanted item from results and click on it", () => {
-    for (var i = 0; i < ResultsPage.productNames.length; i++) {
+    var i;
+    for (i = 0; i < ResultsPage.productNames.length; i++) {
       if (
         ResultsPage.productNames[i].getText().toLowerCase() ==
         productToChoose.toLowerCase()
@@ -43,6 +44,7 @@ describe("Adding item to cart and checking out", () => {
         break;
       }
     }
+    expect(i).not.toBe(ResultsPage.productNames.length);
   });
 
   it("should choose product color and size", () => {
