@@ -19,7 +19,7 @@ describe("Actions on sale products", () => {
     expect(SalePage.hundredToTwoHundredAppliedFilterValue).toExist();
   });
 
-  it("should check if the sale page shows discounted items for sale", () => {
+  it("should check if the sale page shows discounted products for sale", () => {
     expect(SalePage.saleItems).not.toBeElementsArrayOfSize(0);
   });
 });
