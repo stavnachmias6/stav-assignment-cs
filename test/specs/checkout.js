@@ -36,13 +36,13 @@ describe("Adding item to cart and checking out", () => {
         productToChoose.toLowerCase()
       ) {
         ResultsPage.productNames[i].click();
+        ProductPage.productName.waitForDisplayed();
+        expect(ProductPage.productName).toHaveText(productToChoose, {
+          ignoreCase: true,
+        });
         break;
       }
     }
-    ProductPage.productName.waitForDisplayed();
-    expect(ProductPage.productName).toHaveText(productToChoose, {
-      ignoreCase: true,
-    });
   });
 
   it("should choose product color and size", () => {
