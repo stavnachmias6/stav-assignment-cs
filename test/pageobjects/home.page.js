@@ -27,7 +27,6 @@ class HomePage extends Page {
 
   get saleButton() {
     return $("//li[contains(@class,'nav-5 parent')]/a");
-    //return $("=Sale");
   }
 
   open() {

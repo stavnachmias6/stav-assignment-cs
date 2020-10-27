@@ -14,7 +14,6 @@ class ProductPage extends Page {
   }
 
   get addToCartButton() {
-    //return $("span=Add to Cart");
     return $("//div/button[@title='Add to Cart']");
   }
 }
